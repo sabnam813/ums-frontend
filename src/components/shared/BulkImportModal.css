@@ -1,0 +1,264 @@
+.bulk-import-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.bulk-import-modal {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease;
+}
+
+.bim-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.bim-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.bim-close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.bim-close:hover {
+  color: #1f2937;
+}
+
+.bim-content {
+  padding: 20px;
+}
+
+.bim-section {
+  margin-bottom: 20px;
+}
+
+.bim-info {
+  margin: 0 0 16px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.bim-file-input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.bim-file-input {
+  display: none;
+}
+
+.bim-file-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px 20px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f9fafb;
+  transition: all 0.2s;
+  color: #6b7280;
+}
+
+.bim-file-label:hover {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  color: #1f2937;
+}
+
+.bim-file-label svg {
+  color: currentColor;
+}
+
+.bim-file-name {
+  margin: 0;
+  font-size: 13px;
+  color: #10b981;
+  padding: 8px 12px;
+  background: #f0fdf4;
+  border-radius: 4px;
+  border-left: 3px solid #10b981;
+}
+
+.bim-mapping-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.bim-mapping-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bim-mapping-row.unmatched {
+  background: var(--yellow-light, #FFF8E1);
+  border: 1px solid var(--yellow, #B8860B);
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.bim-mapping-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  word-break: break-word;
+}
+
+.bim-mapping-select {
+  padding: 6px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 13px;
+  background: white;
+  color: #374151;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.bim-mapping-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.bim-preview-table {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0;
+}
+
+.bim-preview-table table {
+  font-size: 12px;
+}
+
+.bim-preview-table th {
+  background: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+}
+
+.bim-preview-table td {
+  color: #6b7280;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.bim-footer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.bim-btn-cancel,
+.bim-btn-next,
+.bim-btn-import {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bim-btn-cancel {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.bim-btn-cancel:hover {
+  background: #e5e7eb;
+}
+
+.bim-btn-next {
+  background: #3b82f6;
+  color: white;
+}
+
+.bim-btn-next:hover {
+  background: #2563eb;
+}
+
+.bim-btn-import {
+  background: #10b981;
+  color: white;
+}
+
+.bim-btn-import:hover:not(:disabled) {
+  background: #059669;
+}
+
+.bim-btn-import:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

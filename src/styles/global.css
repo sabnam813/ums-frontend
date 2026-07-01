@@ -1,0 +1,207 @@
+
+:root {
+  /* Professional Brand Colors — derived from the UCA / UniConsultants Alliance logo */
+  --uca-blue: #2E4F8F;
+  --uca-blue-dark: #1E3766;
+  --uca-blue-light: #4868A8;
+  --uca-blue-xlight: #EEF2F9;
+  --uca-orange: #F08641;
+  --uca-orange-light: #F5A268;
+  --uca-orange-xlight: #FDF1E8;
+
+  /* Neutral Grays */
+  --gray-50: #FAFBFC;
+  --gray-100: #F5F5F5;
+  --gray-200: #ECECEC;
+  --gray-300: #DCDCDC;
+  --gray-400: #999999;
+  --gray-500: #666666;
+  --gray-600: #555555;
+  --gray-700: #444444;
+  --gray-800: #333333;
+  --gray-900: #1A1A1A;
+
+  /* Status Colors - Professional Tones */
+  --green: #3F7D5C;
+  --green-light: #EEF4F0;
+  --red: #A24A45;
+  --red-light: #F6EDEC;
+  --yellow: #8C7338;
+  --yellow-light: #F5F0E5;
+  --purple: #6B5B95;
+  --purple-light: #EFEDF5;
+
+  --sidebar-width: 232px;
+  --sidebar-collapsed: 64px;
+  --topbar-height: 60px;
+
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.12), 0 4px 10px rgba(0,0,0,0.08);
+  --shadow-xl: 0 20px 50px rgba(0,0,0,0.15);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  --transition: all 0.2s ease;
+  --transition-slow: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--gray-50);
+  color: var(--gray-800);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--gray-400); }
+
+*:focus-visible {
+  outline: 2px solid var(--uca-blue);
+  outline-offset: 2px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes notifPop {
+  0% { opacity: 0; transform: scale(0.85) translateY(-8px); }
+  70% { transform: scale(1.03) translateY(0); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(240, 134, 65, 0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(240, 134, 65, 0); }
+}
+
+.animate-fade { animation: fadeIn 0.3s ease; }
+.animate-slide-left { animation: slideInLeft 0.3s ease; }
+.animate-slide-right { animation: slideInRight 0.3s ease; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+.custom-select .react-select__control {
+  border: 1.5px solid var(--gray-200) !important;
+  border-radius: var(--radius-md) !important;
+  min-height: 40px !important;
+  box-shadow: none !important;
+  font-size: 0.875rem;
+  background: white;
+  transition: var(--transition);
+}
+.custom-select .react-select__control:hover,
+.custom-select .react-select__control--is-focused {
+  border-color: var(--uca-blue) !important;
+}
+.custom-select .react-select__menu {
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-lg) !important;
+  z-index: 9999 !important;
+}
+.custom-select .react-select__option--is-selected {
+  background-color: var(--uca-blue) !important;
+}
+.custom-select .react-select__option--is-focused {
+  background-color: var(--uca-blue-xlight) !important;
+  color: var(--uca-blue-dark) !important;
+}
+
+.toast-custom {
+  font-family: var(--font-body) !important;
+  font-size: 0.875rem !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+@media print {
+  .sidebar, .topbar, .dt-toolbar, .dt-filters, .dt-footer,
+  .export-group, .row-btn, .td-check, .notif-wrap,
+  .topbar-right, button, .af-overlay, .modal,
+  .settings-sidebar, .settings-nav {
+    display: none !important;
+  }
+  body, html {
+    background: white !important;
+    color: black !important;
+  }
+  .dt-table-wrap {
+    overflow: visible !important;
+    box-shadow: none !important;
+  }
+  table {
+    page-break-inside: auto;
+  }
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  html { font-size: 13px; }
+
+  .card, .section-card { padding: 12px !important; }
+
+  .modal, .be-modal, .cm-modal {
+    width: calc(100vw - 24px) !important;
+    max-width: none !important;
+    margin: 12px !important;
+    max-height: calc(100vh - 24px) !important;
+  }
+
+  .be-overlay { padding: 12px; align-items: flex-end; }
+  .be-modal { max-width: 100% !important; border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important; }
+}

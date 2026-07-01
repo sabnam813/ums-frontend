@@ -1,0 +1,54 @@
+.chart-empty {
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  color: var(--gray-400);
+  font-size: 0.8125rem;
+  font-style: italic;
+}
+
+.bar-breakdown { display: flex; flex-direction: column; gap: 10px; }
+.bar-breakdown-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 32px;
+  align-items: center;
+  gap: 10px;
+}
+.bar-breakdown-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.bar-breakdown-track {
+  background: var(--gray-100);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+.bar-breakdown-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.4s ease;
+}
+.bar-breakdown-value {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  text-align: right;
+}
+
+.trend-chart { display: block; }
+
+.ring-stat {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.ring-stat-label {
+  position: absolute;
+  display: flex; flex-direction: column; align-items: center;
+  line-height: 1.1;
+}
+.ring-stat-value { font-size: 1rem; font-weight: 800; color: var(--gray-800); font-family: var(--font-display); }
+.ring-stat-sub { font-size: 0.5625rem; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.4px; }

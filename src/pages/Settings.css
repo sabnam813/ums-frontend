@@ -1,0 +1,135 @@
+.settings-root { display: flex; flex-direction: column; gap: 20px; }
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.settings-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-sm);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-card-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin: 0 0 2px;
+}
+.settings-card-header p {
+  font-size: 0.8125rem;
+  color: var(--gray-500);
+  margin: 0;
+}
+
+.account-card { grid-column: span 1; }
+.account-overview {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--gray-100);
+}
+.account-avatar-lg {
+  width: 56px; height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--uca-orange);
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; font-weight: 700;
+  flex-shrink: 0;
+}
+.account-overview-info { display: flex; flex-direction: column; gap: 4px; }
+.account-name { font-weight: 700; color: var(--gray-800); font-size: 1rem; }
+.account-role-badge {
+  display: inline-flex; align-self: flex-start;
+  padding: 2px 10px; border-radius: var(--radius-full);
+  font-size: 0.75rem; font-weight: 600;
+  background: var(--uca-blue-xlight); color: var(--uca-blue);
+}
+.account-role-badge.admin { background: var(--uca-orange-xlight); color: var(--uca-orange); }
+
+.account-meta-list { display: flex; flex-direction: column; gap: 10px; }
+.account-meta-row {
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.8125rem;
+}
+.meta-label { color: var(--gray-500); font-weight: 500; }
+.meta-value { color: var(--gray-700); font-weight: 600; text-align: right; }
+.meta-value-code {
+  background: var(--gray-100); color: var(--uca-blue);
+  padding: 2px 8px; border-radius: 5px; font-size: 0.8125rem; font-weight: 600;
+}
+.meta-status {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-weight: 600; text-transform: capitalize;
+}
+.meta-status.active { color: var(--green); }
+.meta-status.inactive { color: var(--red); }
+.meta-status-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+
+.settings-form { display: flex; flex-direction: column; gap: 14px; }
+.settings-field { display: flex; flex-direction: column; gap: 6px; }
+.settings-field label {
+  font-size: 0.8125rem; font-weight: 600; color: var(--gray-600);
+}
+.settings-input {
+  padding: 9px 12px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  color: var(--gray-800);
+  transition: var(--transition);
+  background: white;
+}
+.settings-input:focus {
+  outline: none;
+  border-color: var(--uca-blue);
+  box-shadow: 0 0 0 3px var(--uca-blue-xlight);
+}
+.settings-input:disabled {
+  background: var(--gray-50);
+  color: var(--gray-400);
+  cursor: not-allowed;
+}
+.settings-hint { font-size: 0.75rem; color: var(--gray-400); }
+
+.settings-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 480px) {
+  .settings-grid-2 { grid-template-columns: 1fr; }
+}
+
+.settings-checkbox-row {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.8125rem; color: var(--gray-500);
+  cursor: pointer;
+}
+
+.settings-form-actions { display: flex; justify-content: flex-end; margin-top: 4px; }
+.settings-save-btn {
+  padding: 9px 20px;
+  background: var(--uca-blue);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.settings-save-btn:hover:not(:disabled) { background: var(--uca-blue-dark); }
+.settings-save-btn:disabled { opacity: 0.6; cursor: not-allowed; }
