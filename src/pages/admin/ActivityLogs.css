@@ -1,0 +1,40 @@
+.activity-logs { padding: 0; }
+
+.logs-filters {
+  display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap;
+}
+.logs-filters select,
+.logs-filters input {
+  border: 1.5px solid var(--gray-200); border-radius: var(--radius-md);
+  padding: 8px 12px; font-size: 13px; background: #fff;
+}
+.logs-filters input { min-width: 220px; }
+
+.logs-table-wrap {
+  background: #fff; border: 1.5px solid var(--gray-200); border-radius: var(--radius-lg);
+  overflow-x: auto;
+}
+.logs-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.logs-table th {
+  text-align: left; padding: 10px 14px; background: var(--gray-50, #f9fafb);
+  font-weight: 700; color: var(--gray-600); border-bottom: 1.5px solid var(--gray-200);
+  white-space: nowrap;
+}
+.logs-table td {
+  padding: 10px 14px; border-bottom: 1px solid var(--gray-100, #f1f5f9); vertical-align: top;
+}
+.logs-table tr:last-child td { border-bottom: none; }
+.logs-role { color: var(--gray-500); font-size: 12px; }
+.logs-message { color: var(--gray-600); }
+.logs-empty { text-align: center; color: var(--gray-400); padding: 24px !important; }
+
+.logs-action-badge {
+  display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 12px;
+  font-weight: 600; background: var(--gray-100); color: var(--gray-700); white-space: nowrap;
+}
+.logs-action-badge.warn { background: var(--red-light); color: var(--red-dark); }
+
+.logs-pagination {
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+  margin-top: 16px; font-size: 13px; color: var(--gray-600);
+}

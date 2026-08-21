@@ -1,0 +1,20 @@
+.tpd-section-body { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; }
+
+.tpd-item { display: flex; flex-direction: column; gap: 3px; }
+.tpd-item label {
+  font-size: 0.7rem; font-weight: 700; color: var(--gray-500);
+  text-transform: uppercase; letter-spacing: 0.03em;
+}
+.tpd-item span {
+  font-size: 0.9rem; color: var(--gray-800); font-weight: 500;
+}
+.tpd-item span.tpd-empty { color: var(--gray-400); font-weight: 400; }
+
+.tpd-remarks {
+  grid-column: 1 / -1;
+}
+.tpd-remarks span { white-space: pre-wrap; }
+
+@media (max-width: 640px) {
+  .tpd-section-body { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,136 @@
+.trash-page { display: flex; flex-direction: column; gap: 20px; }
+
+.trash-page .page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.trash-page .page-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--gray-800);
+  letter-spacing: -0.3px;
+}
+.trash-page .page-header p { font-size: 0.875rem; color: var(--gray-500); margin-top: 2px; max-width: 520px; }
+
+.trash-btn {
+  padding: 9px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.trash-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.trash-btn-restore { background: var(--uca-blue); color: white; }
+.trash-btn-restore:hover:not(:disabled) { background: var(--uca-blue-dark); }
+.trash-btn-danger { background: var(--red); color: white; }
+.trash-btn-danger:hover:not(:disabled) { background: var(--red-dark); }
+.trash-btn-outline { background: white; color: var(--gray-700); border: 1.5px solid var(--gray-200); }
+.trash-btn-outline:hover:not(:disabled) { border-color: var(--red); color: var(--red); }
+
+.trash-filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.trash-filter-chip {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--gray-200);
+  background: white;
+  color: var(--gray-600);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.trash-filter-chip.active { background: var(--uca-blue-xlight); border-color: var(--uca-blue); color: var(--uca-blue-dark); }
+
+.trash-table-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--gray-200);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.trash-table { width: 100%; border-collapse: collapse; }
+.trash-table thead tr { background: var(--gray-50); }
+.trash-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--gray-500);
+  border-bottom: 1.5px solid var(--gray-200);
+}
+.trash-table td {
+  padding: 12px 16px;
+  font-size: 0.875rem;
+  color: var(--gray-800);
+  border-bottom: 1px solid var(--gray-100);
+}
+.trash-table tr:last-child td { border-bottom: none; }
+.trash-item-name { font-weight: 600; }
+
+.trash-type-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: var(--uca-blue-xlight);
+  color: var(--uca-blue-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.trash-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.trash-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 11px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--gray-200);
+  background: white;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.trash-action-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.trash-action-btn.restore { color: var(--uca-blue-dark); }
+.trash-action-btn.restore:hover:not(:disabled) { border-color: var(--uca-blue); background: var(--uca-blue-xlight); }
+.trash-action-btn.delete { color: var(--red); }
+.trash-action-btn.delete:hover:not(:disabled) { border-color: var(--red); background: var(--red-light); }
+
+.dt-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 60px 20px;
+  color: var(--gray-400);
+}
+.dt-empty p { font-size: 0.9rem; font-weight: 500; }
+
+.dt-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 80px 20px;
+  color: var(--gray-500);
+}
+.dt-spinner {
+  width: 32px; height: 32px;
+  border: 3px solid var(--gray-200);
+  border-top-color: var(--uca-blue);
+  border-radius: 50%;
+  animation: trash-spin 0.8s linear infinite;
+}
+@keyframes trash-spin { to { transform: rotate(360deg); } }

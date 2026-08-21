@@ -1,0 +1,124 @@
+.sc-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1100; padding: 20px;
+}
+
+.sc-modal {
+  background: white;
+  border-radius: var(--radius-xl);
+  width: 100%; max-width: 460px;
+  max-height: 86vh;
+  display: flex; flex-direction: column;
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+}
+
+.sc-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 22px;
+  background: var(--uca-blue);
+  color: white; flex-shrink: 0;
+}
+.sc-title-group { display: flex; align-items: center; gap: 12px; }
+.sc-icon {
+  width: 38px; height: 38px;
+  background: rgba(255,255,255,0.15); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.sc-title-group h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; }
+.sc-title-group p { font-size: 0.75rem; opacity: 0.85; margin-top: 2px; }
+.sc-close {
+  width: 32px; height: 32px;
+  background: rgba(255,255,255,0.15); border: none; border-radius: 8px;
+  color: white; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: var(--transition);
+}
+.sc-close:hover { background: rgba(255,255,255,0.25); }
+
+.sc-toolbar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 8px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--gray-100);
+  flex-shrink: 0;
+}
+.sc-toolbar-actions { display: flex; gap: 8px; }
+.sc-toolbar-btn {
+  padding: 6px 12px;
+  background: var(--uca-blue-xlight);
+  color: var(--uca-blue-dark);
+  border: none; border-radius: var(--radius-sm);
+  font-size: 0.75rem; font-weight: 600;
+  cursor: pointer; transition: var(--transition);
+  font-family: var(--font-body);
+}
+.sc-toolbar-btn:hover { background: var(--uca-blue); color: white; }
+.sc-selected-count { font-size: 0.75rem; color: var(--gray-500); font-weight: 600; white-space: nowrap; }
+
+.sc-body {
+  flex: 1; overflow-y: auto; padding: 14px 20px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px;
+}
+
+.sc-option {
+  display: flex; align-items: center; gap: 9px;
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  cursor: pointer; user-select: none;
+  font-size: 0.8125rem; color: var(--gray-700); font-weight: 500;
+  transition: var(--transition);
+}
+.sc-option:hover { background: var(--gray-50); }
+.sc-option input { display: none; }
+.sc-option-box {
+  width: 17px; height: 17px; flex-shrink: 0;
+  border-radius: 5px;
+  border: 2px solid var(--gray-300);
+  display: flex; align-items: center; justify-content: center;
+  transition: var(--transition);
+}
+.sc-option.checked .sc-option-box { background: var(--uca-blue); border-color: var(--uca-blue); }
+.sc-option.locked { opacity: 0.65; cursor: not-allowed; }
+
+.sc-remember {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 20px;
+  border-top: 1px solid var(--gray-100);
+  font-size: 0.8rem; color: var(--gray-600); flex-shrink: 0;
+}
+.sc-remember input { width: 15px; height: 15px; cursor: pointer; }
+
+.sc-footer {
+  display: flex; align-items: center; justify-content: flex-end;
+  gap: 10px;
+  padding: 14px 20px;
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-100);
+  flex-shrink: 0;
+}
+
+.sc-cancel {
+  padding: 9px 18px; background: white;
+  border: 1.5px solid var(--gray-200); border-radius: var(--radius-md);
+  font-size: 0.875rem; font-weight: 600; color: var(--gray-600);
+  cursor: pointer; transition: var(--transition); font-family: var(--font-body);
+}
+.sc-cancel:hover { border-color: var(--gray-400); }
+
+.sc-confirm {
+  display: flex; align-items: center; gap: 7px;
+  padding: 9px 18px; background: var(--uca-blue); color: white; border: none;
+  border-radius: var(--radius-md); font-size: 0.875rem; font-weight: 600;
+  cursor: pointer; transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(21,101,192,0.12); font-family: var(--font-body);
+}
+.sc-confirm:hover:not(:disabled) { background: var(--uca-blue-dark); }
+.sc-confirm:disabled { opacity: 0.4; cursor: not-allowed; }
+
+@media (max-width: 480px) {
+  .sc-body { grid-template-columns: 1fr; }
+}

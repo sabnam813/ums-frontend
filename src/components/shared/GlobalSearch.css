@@ -1,0 +1,186 @@
+.gs-wrap { position: relative; }
+
+.gs-input-box {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 260px;
+  padding: 0 10px;
+  height: 38px;
+  background: var(--gray-50);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+}
+.gs-input-box.gs-focused,
+.gs-input-box:focus-within {
+  border-color: var(--uca-blue);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
+}
+.gs-input-box svg { color: var(--gray-400); flex-shrink: 0; }
+.gs-input-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.8125rem;
+  font-family: var(--font-body);
+  color: var(--gray-800);
+  min-width: 0;
+}
+.gs-input-box input::placeholder { color: var(--gray-400); }
+.gs-clear {
+  background: none; border: none; cursor: pointer; color: var(--gray-400);
+  display: flex; align-items: center; flex-shrink: 0; padding: 2px;
+}
+.gs-clear:hover { color: var(--gray-600); }
+
+.gs-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 340px;
+  max-height: 380px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+  z-index: 500;
+  padding: 6px;
+}
+
+.gs-status {
+  padding: 16px 12px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--gray-500);
+}
+
+.gs-result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  padding: 9px 10px;
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.gs-result:hover { background: var(--uca-blue-xlight); }
+
+.gs-result-type {
+  flex-shrink: 0;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.gs-result-text { display: flex; flex-direction: column; min-width: 0; }
+.gs-result-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gs-result-subtitle {
+  font-size: 0.72rem;
+  color: var(--gray-500);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gs-preview-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.45);
+  z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 20px;
+}
+.gs-preview-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 420px;
+  overflow: hidden;
+}
+.gs-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  color: white;
+}
+.gs-preview-type {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.gs-preview-close {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 26px; height: 26px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.gs-preview-close:hover { background: rgba(255,255,255,0.32); }
+
+.gs-preview-body { padding: 20px 22px; }
+.gs-preview-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 14px;
+}
+
+.gs-preview-details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 14px;
+  margin-bottom: 20px;
+}
+.gs-preview-details dt {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-500);
+  white-space: nowrap;
+}
+.gs-preview-details dd {
+  font-size: 0.8125rem;
+  color: var(--gray-800);
+}
+
+.gs-preview-open-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 42px;
+  background: var(--uca-blue);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.gs-preview-open-btn:hover { background: var(--uca-blue-dark); }
+
+@media (max-width: 900px) {
+  .gs-input-box { width: 180px; }
+  .gs-dropdown { width: 280px; }
+}
