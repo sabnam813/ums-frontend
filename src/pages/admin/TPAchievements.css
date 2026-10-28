@@ -1,0 +1,134 @@
+.tpach-view-toggle {
+  display: flex;
+  gap: 4px;
+  background: var(--gray-100);
+  border-radius: var(--radius-md);
+  padding: 4px;
+}
+.tpach-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tpach-toggle-btn {
+  border: none;
+  background: transparent;
+  padding: 8px 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gray-500);
+  border-radius: calc(var(--radius-md) - 2px);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.tpach-toggle-btn.active {
+  background: white;
+  color: var(--uca-blue-dark);
+  box-shadow: var(--shadow-sm);
+}
+.tpach-toggle-btn:hover:not(.active) {
+  color: var(--gray-700);
+}
+
+.tpach-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.tpach-filters .ach-field {
+  min-width: 140px;
+}
+
+.tpach-table thead th {
+  text-align: center;
+}
+.tpach-subhead {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  padding: 6px 8px !important;
+}
+.tpach-quarter-row {
+  background: var(--uca-blue-xlight);
+}
+.tpach-quarter-row td {
+  border-top: 2px solid var(--gray-200);
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.tpach-fy-total-row {
+  background: var(--uca-blue-xlight);
+}
+.tpach-fy-total-row td {
+  border-top: 2px solid var(--uca-blue, #2563eb);
+}
+.tpach-row-actions {
+  display: inline-flex;
+  gap: 4px;
+  margin-left: 8px;
+  align-items: center;
+}
+
+.tpach-scroll-wrap {
+  max-height: 560px;
+  overflow: auto;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+}
+.tpach-scroll-wrap .tpach-table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.tpach-scroll-wrap .tpach-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--gray-50, #f8fafc);
+  z-index: 2;
+}
+.tpach-scroll-wrap .tpach-table thead tr:first-child th {
+  top: 0;
+}
+.tpach-scroll-wrap .tpach-table thead tr:nth-child(2) th {
+  top: 34px;
+}
+.tpach-scroll-wrap .tpach-table td:first-child,
+.tpach-scroll-wrap .tpach-table th:first-child {
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 1;
+}
+.tpach-scroll-wrap .tpach-table thead th:first-child {
+  z-index: 3;
+}
+.tpach-scroll-wrap .tpach-quarter-row td:first-child,
+.tpach-scroll-wrap .tpach-fy-total-row td:first-child {
+  background: var(--uca-blue-xlight);
+}
+
+.tpach-target-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.tpach-clear-btn {
+  border: none;
+  background: transparent;
+  color: var(--gray-300);
+  cursor: pointer;
+  padding: 2px;
+  display: inline-flex;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+.tpach-clear-btn:hover:not(:disabled) {
+  color: var(--red, #dc2626);
+  background: var(--red-light, #fee2e2);
+}
+.tpach-clear-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

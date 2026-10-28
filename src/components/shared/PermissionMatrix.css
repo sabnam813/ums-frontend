@@ -1,0 +1,31 @@
+.pm-root { display: flex; flex-direction: column; gap: 10px; }
+.pm-summary { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; font-size: 12.5px; color: #475467; background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 8px 12px; }
+.pm-link { background: none; border: none; color: #1565c0; font-weight: 600; font-size: 12.5px; cursor: pointer; padding: 0; }
+.pm-link:hover { text-decoration: underline; }
+.pm-changes { margin: 0; padding: 8px 12px 8px 28px; font-size: 12.5px; background: #fffaf0; border: 1px solid #fedf89; border-radius: 8px; max-height: 140px; overflow-y: auto; }
+.pm-changes li.on { color: #067647; }
+.pm-changes li.off { color: #b42318; }
+.pm-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; font-size: 12px; color: #667085; }
+.pm-dot { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 4px; }
+.pm-dot.inherited { background: #d1e9ff; }
+.pm-dot.extra { background: #abefc6; }
+.pm-dot.removed { background: #fecdca; }
+.pm-scroll { overflow-x: auto; border: 1px solid #e5e7eb; border-radius: 8px; }
+.pm-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.pm-table th, .pm-table td { padding: 5px 6px; border-bottom: 1px solid #f2f4f7; text-align: center; white-space: nowrap; }
+.pm-table thead th { background: #f8fafc; position: sticky; top: 0; }
+.pm-module-col { text-align: left !important; font-weight: 600; padding-left: 10px !important; position: sticky; left: 0; background: #fff; z-index: 1; }
+.pm-table thead .pm-module-col { background: #f8fafc; }
+.pm-col-btn { background: none; border: none; font-weight: 600; font-size: 12px; color: #344054; cursor: pointer; padding: 2px 4px; border-radius: 4px; }
+.pm-col-btn:hover:not(:disabled) { background: #e5e7eb; }
+.pm-preset-col { text-align: left !important; }
+.pm-preset { border: 1px solid #d0d5dd; background: #fff; color: #475467; border-radius: 999px; font-size: 11px; padding: 2px 8px; margin-right: 4px; cursor: pointer; }
+.pm-preset.active { background: #1565c0; border-color: #1565c0; color: #fff; }
+.pm-preset:disabled { opacity: .5; cursor: not-allowed; }
+.pm-cell.inherited { background: #eff8ff; }
+.pm-cell.extra { background: #ecfdf3; }
+.pm-cell.removed { background: #fef3f2; }
+
+.pm-mode-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.pm-mode-btn { flex: 1; min-width: 110px; padding: 7px 10px; border: 1px solid #d0d5dd; background: #fff; border-radius: 8px; font-size: 13px; font-weight: 500; color: #344054; cursor: pointer; }
+.pm-mode-btn.active { background: #1565c0; border-color: #1565c0; color: #fff; }

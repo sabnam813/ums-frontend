@@ -1,0 +1,15 @@
+.drap-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; margin-bottom: 16px; }
+.drap-toggle { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 12px; background: none; border: none; padding: 12px 16px; cursor: pointer; font-size: 13px; color: #475467; text-align: left; }
+.drap-toggle strong { color: #101828; font-size: 14px; }
+.drap-body { padding: 4px 16px 16px; display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.drap-body h4 { margin: 0 0 2px; font-size: 13.5px; }
+.drap-body p { margin: 0 0 8px; font-size: 12px; color: #667085; }
+.drap-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
+.drap-body input, .drap-body select, .drap-body textarea { border: 1px solid #d0d5dd; border-radius: 8px; padding: 7px 10px; font-size: 13px; font-family: inherit; }
+.drap-body textarea { width: 100%; box-sizing: border-box; margin-bottom: 8px; }
+.drap-body input[type="number"] { width: 80px; }
+.drap-btn { background: #1565c0; color: #fff; border: none; border-radius: 8px; padding: 7px 14px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.drap-btn:disabled { opacity: .6; cursor: not-allowed; }
+.drap-list { list-style: none; margin: 0; padding: 0; font-size: 12.5px; max-height: 140px; overflow-y: auto; }
+.drap-list li { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #f2f4f7; }
+.drap-link { background: none; border: none; color: #d92d20; font-size: 12px; cursor: pointer; }

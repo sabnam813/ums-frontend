@@ -1,0 +1,200 @@
+.rcpt-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 26, 40, 0.55);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 24px;
+}
+
+.rcpt-modal {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  width: min(1080px, 100%);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.rcpt-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 26px;
+  border-bottom: 1px solid var(--gray-100);
+  background: var(--uca-blue-xlight);
+}
+
+.rcpt-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0 0 2px;
+}
+
+.rcpt-sub {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.rcpt-close {
+  background: none;
+  border: none;
+  color: var(--gray-500);
+  cursor: pointer;
+  border-radius: var(--radius-full);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.rcpt-close:hover { background: var(--gray-100); color: var(--gray-800); }
+
+.rcpt-body {
+  padding: 22px 26px;
+  overflow-y: auto;
+}
+
+.rcpt-doc-title {
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--uca-blue-dark);
+  margin: 0 0 18px;
+  letter-spacing: 0.01em;
+}
+
+.rcpt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.rcpt-table caption {
+  caption-side: top;
+  text-align: left;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  padding: 0 2px 8px;
+}
+
+.rcpt-table th, .rcpt-table td {
+  border: 1px solid var(--gray-200);
+  padding: 9px 10px;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--gray-800);
+}
+
+.rcpt-table thead th {
+  color: white;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: var(--uca-blue);
+}
+
+.rcpt-table.accounting thead th { background: var(--uca-orange); }
+.rcpt-table.summary thead th { background: var(--green-dark); }
+
+.rcpt-table tbody tr:nth-child(even) { background: var(--gray-50); }
+
+.rcpt-total-row td {
+  font-weight: 700;
+  background: var(--uca-blue-xlight) !important;
+}
+
+.positive { color: var(--green-dark); font-weight: 600; }
+.negative { color: var(--red-dark); font-weight: 600; }
+
+.rcpt-signoff {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 6px;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+.rcpt-signoff strong { color: var(--gray-900); }
+
+.rcpt-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 26px;
+  border-top: 1px solid var(--gray-100);
+  background: var(--gray-50);
+}
+.rcpt-footer-split {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.rcpt-footer-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.rcpt-footer-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.rcpt-footer-buttons {
+  display: flex;
+  gap: 8px;
+}
+@media (max-width: 640px) {
+  .rcpt-footer-split { justify-content: flex-start; }
+}
+
+.rcpt-btn {
+  padding: 9px 18px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--gray-200);
+  background: white;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--gray-700);
+}
+.rcpt-btn:hover { border-color: var(--uca-blue-light); color: var(--uca-blue); }
+.rcpt-btn.primary {
+  background: var(--uca-blue);
+  border-color: var(--uca-blue);
+  color: white;
+}
+.rcpt-btn.primary:hover { background: var(--uca-blue-dark); }
+
+@media (max-width: 720px) {
+  .rcpt-table th, .rcpt-table td { font-size: 0.7rem; padding: 6px; }
+}
+
+.rcpt-footer .rcpt-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}

@@ -1,0 +1,36 @@
+.system-dashboard { padding: 0; }
+
+.sys-section { margin-bottom: 28px; }
+.sys-section h3 {
+  font-size: 14px; font-weight: 700; color: var(--gray-800);
+  margin: 0 0 12px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.sys-section .section-hint { font-size: 13px; color: var(--gray-500); margin: -6px 0 14px; }
+
+.sys-stat-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+}
+.sys-stat-card {
+  background: #fff; border: 1.5px solid var(--gray-200); border-radius: var(--radius-md);
+  padding: 14px 16px; display: flex; flex-direction: column; gap: 4px;
+}
+.sys-stat-value { font-size: 20px; font-weight: 700; color: var(--uca-blue); word-break: break-word; }
+.sys-stat-label { font-size: 12px; color: var(--gray-500); font-weight: 600; }
+
+.sys-section.danger {
+  border: 1.5px solid var(--red-border); background: var(--red-light); border-radius: var(--radius-lg); padding: 18px;
+}
+.sys-section.danger h3 { color: var(--red-dark); }
+
+.sys-danger-actions { display: flex; flex-direction: column; gap: 10px; }
+.sys-danger-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  background: #fff; border: 1px solid var(--red-border); border-radius: var(--radius-md);
+  padding: 12px 16px;
+}
+.sys-danger-row strong { font-size: 13px; color: var(--gray-900); }
+.sys-danger-row p { font-size: 12px; color: var(--gray-500); margin: 2px 0 0; }
+.btn-cancel.danger { border-color: var(--red-border); color: var(--red-dark); }
+.btn-cancel.danger:hover { background: var(--red-light); }
+.btn-cancel:disabled { opacity: 0.6; cursor: not-allowed; }

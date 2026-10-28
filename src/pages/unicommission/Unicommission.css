@@ -1,0 +1,24 @@
+.uc-tile-meta { font-size: 0.7rem; color: var(--gray-400, #94a3b8); }
+.uc-note { background: var(--uca-blue-xlight, #eef4ff); color: var(--gray-700, #334155); border-radius: var(--radius-md, 8px); padding: 9px 12px; font-size: 0.78rem; line-height: 1.4; }
+.uc-section-title { font-size: 0.78rem; font-weight: 700; color: var(--text-secondary, #64748b); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 4px; }
+.uc-preview { background: var(--gray-50, #f8fafc); border: 1px dashed var(--gray-300, #cbd5e1); border-radius: var(--radius-md, 8px); padding: 9px 12px; font-size: 0.85rem; }
+.uc-radio-row { display: flex; flex-direction: column; gap: 8px; }
+.uc-radio { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 500; color: var(--text, #0f172a); cursor: pointer; }
+.uc-breadcrumb { font-size: 0.8rem; color: var(--gray-500, #64748b); margin-bottom: 6px; }
+.uc-breadcrumb a { color: var(--uca-blue, #1565c0); font-weight: 600; text-decoration: none; }
+.uc-breadcrumb a:hover { text-decoration: underline; }
+.uc-head-title { display: flex; align-items: center; gap: 12px; }
+.uc-setting-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--gray-100, #f1f5f9); border: 1px solid var(--gray-200, #e2e8f0); border-radius: 999px; padding: 4px 10px; font-size: 0.74rem; color: var(--gray-700, #334155); cursor: default; }
+.uc-setting-chip button { border: none; background: none; color: var(--uca-blue, #1565c0); font-weight: 700; font-size: 0.74rem; cursor: pointer; padding: 0; text-decoration: underline; }
+.uc-totals { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 0.8rem; color: var(--text-secondary, #64748b); padding: 8px 2px 0; }
+.uc-totals strong { color: var(--text, #0f172a); }
+.uc-badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; }
+.uc-badge-Pending { background: #fef3c7; color: #92400e; }
+.uc-badge-Partial { background: #dbeafe; color: #1e40af; }
+.uc-badge-Received { background: #dcfce7; color: #166534; }
+.uc-src { font-size: 0.74rem; color: var(--gray-500, #64748b); }
+.uc-src-flag { color: #b45309; font-weight: 700; }
+.uc-select-field { min-width: 160px; max-width: 230px; }
+.uc-filters-wide { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; align-items: center; }
+.uc-filters-wide .hb-filter-select { min-width: 140px; max-width: 200px; }
+.uc-num { text-align: right; font-variant-numeric: tabular-nums; }

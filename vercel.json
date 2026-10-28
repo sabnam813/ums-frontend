@@ -1,0 +1,8 @@
+{
+  "buildCommand": "CI=true react-scripts build",
+  "outputDirectory": "build",
+  "framework": "create-react-app",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
