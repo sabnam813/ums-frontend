@@ -1,0 +1,8 @@
+.cn-warn { display: inline-block; margin-left: 6px; font-size: 0.68rem; color: #b45309; background: rgba(245, 158, 11, 0.12); border-radius: 6px; padding: 1px 6px; }
+.cn-inline { width: 100%; min-width: 120px; padding: 5px 7px; border: 1px solid var(--uca-blue); border-radius: 6px; font-size: 0.82rem; background: var(--surface); color: var(--text); }
+.cn-actions-cell { white-space: nowrap; display: flex; gap: 4px; align-items: center; }
+.cn-save-sm { background: var(--uca-blue); color: #fff; border: none; border-radius: 6px; padding: 4px 10px; font-size: 0.76rem; cursor: pointer; }
+.cn-cancel-sm { background: transparent; color: var(--text-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; font-size: 0.76rem; cursor: pointer; }
+.cn-sn { width: 56px; color: var(--text-secondary); }
+.cn-input { width: 100%; padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; font-size: 0.85rem; background: var(--surface); color: var(--text); }
+.cn-input:focus { border-color: var(--uca-blue); outline: none; }

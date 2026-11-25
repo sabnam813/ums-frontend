@@ -1,0 +1,16 @@
+.tpm-num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tpm-table th.tpm-num { text-align: right; }
+.tpm-total-row td { font-weight: 700; background: var(--gray-100); border-top: 2px solid var(--border); }
+.tpm-inline { width: 100%; min-width: 90px; padding: 5px 7px; border: 1px solid var(--uca-blue); border-radius: 6px; font-size: 0.82rem; background: var(--surface); color: var(--text); }
+.tpm-inline-num { text-align: right; }
+.tpm-field-num { width: 100%; padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; font-size: 0.85rem; background: var(--surface); color: var(--text); }
+.tpm-field-num:focus { border-color: var(--uca-blue); outline: none; }
+.tpm-hint { font-size: 0.72rem; color: var(--text-muted); }
+.tpm-sn { width: 56px; color: var(--text-secondary); }
+.tpm-actions-cell { white-space: nowrap; display: flex; gap: 4px; align-items: center; }
+.tpm-save-sm { background: var(--uca-blue); color: #fff; border: none; border-radius: 6px; padding: 4px 10px; font-size: 0.76rem; cursor: pointer; }
+.tpm-cancel-sm { background: transparent; color: var(--text-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; font-size: 0.76rem; cursor: pointer; }
+.tpm-summary { display: flex; gap: 14px; flex-wrap: wrap; margin: 0 0 12px; }
+.tpm-summary-card { border: 1px solid var(--border); border-radius: 10px; padding: 8px 14px; background: var(--surface); min-width: 130px; }
+.tpm-summary-card span { display: block; font-size: 0.72rem; color: var(--text-secondary); }
+.tpm-summary-card strong { font-size: 1.05rem; color: var(--text); }

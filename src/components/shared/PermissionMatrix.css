@@ -1,0 +1,26 @@
+.pm-root{display:flex;flex-direction:column;gap:10px}
+.pm-summary{display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:.9rem;color:#475467;background:#f8fafc;border:1px solid #e5e7eb;border-radius:10px;padding:8px 14px;min-height:40px}
+.pm-link{background:none;border:none;color:#1565c0;font-weight:600;font-size:.9rem;cursor:pointer;padding:6px 4px;min-height:32px}
+.pm-link:hover{text-decoration:underline}
+.pm-changes{margin:0;padding:8px 14px 8px 30px;font-size:.9rem;background:#fffaf0;border:1px solid #fedf89;border-radius:10px;max-height:150px;overflow-y:auto}
+.pm-changes li.on{color:#067647}
+.pm-changes li.off{color:#b42318}
+.pm-scroll{overflow:auto;max-height:52vh;border:1px solid #e5e7eb;border-radius:10px;background:#fff}
+.pm-table{width:100%;border-collapse:separate;border-spacing:0;font-size:.9rem}
+.pm-table th,.pm-table td{padding:0 6px;border-bottom:1px solid #f2f4f7;text-align:center;white-space:nowrap;height:44px;vertical-align:middle}
+.pm-table thead th{background:#f8fafc;position:sticky;top:0;z-index:3;height:44px}
+.pm-module-col{text-align:left!important;font-weight:600;padding-left:14px!important;position:sticky;left:0;background:#fff;z-index:2;min-width:210px;box-shadow:1px 0 0 #eef0f3}
+.pm-table thead .pm-module-col{background:#f8fafc;z-index:4}
+.pm-col-btn{background:none;border:none;font-weight:700;font-size:.82rem;color:#344054;cursor:pointer;padding:0 8px;min-height:34px;border-radius:6px}
+.pm-col-btn:hover:not(:disabled){background:#e5e7eb}
+.pm-preset-col{text-align:left!important;min-width:230px}
+.pm-preset{border:1px solid #d0d5dd;background:#fff;color:#475467;border-radius:8px;font-size:.82rem;font-weight:600;min-height:30px;min-width:52px;padding:0 10px;margin-right:6px;cursor:pointer}
+.pm-preset:hover:not(:disabled){background:#f2f4f7}
+.pm-preset.active{background:#1565c0;border-color:#1565c0;color:#fff}
+.pm-preset:disabled{opacity:.5;cursor:not-allowed}
+.pm-check{display:flex;align-items:center;justify-content:center;width:100%;height:44px;min-width:60px;cursor:pointer;margin:0}
+.pm-check input{width:18px;height:18px;margin:0;cursor:pointer}
+.pm-check input:disabled{cursor:not-allowed}
+.pm-cell.inherited{background:#eff8ff}
+.pm-cell.extra{background:#ecfdf3}
+.pm-cell.removed{background:#fef3f2}
